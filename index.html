@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Weather Monitering System</title>
+    <link rel="stylesheet" href='../static/style.css'/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+	body {
+	    text-align: center;
+	}
+	#g1,
+	#g2 {
+	    width: 200px;
+	    height: 160px;
+	    display: inline-block;
+	    margin: 1em;
+	}
+   </style>
+</head>
+<body>
+    <h1>Weather Monitering System </h1>
+    <div id="g1"></div>
+    <div id="g2"></div>
+    <hr>
+	<h3> Recent Sensor Reading: {{ time }} ==> <a href="/"class="button">Refresh</a></h3>	
+	<hr>
+	<p> @2019 Developed by SA</p>
+    
+    <script src="../static/raphael-2.1.4.min.js"></script>
+    <script src="../static/justgage.js"></script>
+    <script>
+	var g1, g2;
+	document.addEventListener("DOMContentLoaded", function(event) {
+	    g1 = new JustGage({
+		id: "g1",
+		value: {{temp}},
+		valueFontColor: "black",
+		min: -10,
+		max: 50,
+		title: "Temperature",
+		label: "Celcius"
+	});
+	    g2 = new JustGage({
+		id: "g2",
+		value: {{hum}},
+		valueFontColor: "black",
+		min: 0,
+		max: 100,
+		title: "Humidity",
+		label: "%"
+	});
+      });
+    </script>
+</body>
+</html>
