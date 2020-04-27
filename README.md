@@ -7,4 +7,4 @@ In our project a weather monitoring system website was developed was with Raspbe
 
 In this project we predict the conditions in a region based on the values of weather parameters such as humidity, temperature. The raspberry pi sensor modules that can be installed in different parts of the world and the weather conditions of that place can be accessed through the server where the data from the sensors is transmitted and stored. This system monitors temperature, humidity. The flowchart describes our system that we modeled.
 
-![](projectsy.jpg)
+![](projectsystem.png)
